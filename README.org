@@ -5,34 +5,34 @@ Mainly emacs, fvwm3, and various window managers.
 Fast, minimal, vim-key emacs configuration centred around the following key topics:
 
 ** Philosophy
-It must be fast! There is no excuse for this given current hardware power. I also cannot abide by the lazy loading way where every time you do something different a package has to load and makes you buffer. It's much more preferable to have a long startup, than to hang when you are trying to work. To new users the inconsistency in load time feels very buggy.
-It must be simple! Personally I don't like the literate config thing, it's clear here from my headers (z m) what parts to examine, and every package is contained within it's use-package. It should be clear but not obfuscate the workings of emacs so that new users can learn quickly. Similarly I want to avoid excess packages whenever I can.
-It should just work! If we are to show people the power of emacs, then there needs to be a big button that makes code just 'work'. Everything beyond that can be tweaked as preference dictates.  
-
-** Big Things
-I use evil mode as much as I can. I may change this at some point, but only to emulate basic vim mode in a less bloated package. I also use space as a leader key, inspired by Doom emacs. Any important command that operates on the normal layer, that takes more than 1 key press, has been adapted to a leader key, for example:
-- SPACE + ; = open up the mode to call emacs functions
-- SPACE + TAB = indent a block of text
-- SPACE + SPACE = open a list of buffers
-- SPACE + t = compile latex
+God mode, 2 layers. Maybe I will return to vim-keys with 2 layers via my own key bindings and modalka... One day. Must be fast as emacs possible, which is why everything is compiled and the straight package manager is used. Unfortunately emacs has it's limits, eglot seems to be the best choice currently. It must not get in the way, defer all lag to the start up, nothing worse than trying to do something and emacs suddenly starts lagging.
 
 ** Latex
 I use org-mode for small notes but do most latex work using AUCTEX.
 
 ** C/C++
-Very simple setup, this isn't VScode, if you want that you can add what you miss however. To compile you must write compile and enter which command to compile with, then SPACE + r is set to recompile with the same command. 
+Very simple setup, this isn't VScode, if you want that you can add what you miss however. To compile you must write compile and enter which command to compile with, then SPACE + r is set to recompile with the same command.
+
+** Python
+Work in progress, but need a good environment for dev work.
+
+* Debian
+A list of apt packages I need.
+
+* Guix
+TBC
 
 * diy
-I use a custom keyboard layout for ergonomic reasons. I can write probably a bit too much expaining it... But it's just loaded with setxkbmap.
+A custom keyboard layout for ergonomic reasons. I can write probably a bit too much expaining it... But it's just loaded with setxkbmap.
 
 * Fvwm
-Pretty straight forward, based around the default right hand side bar and 4 virtual workspaces per desk. Still a work in progress however.
+Pretty straight forward, based around the default right hand side bar and 4 virtual workspaces per desk. Still a work in progress however. Comfy wm.
 
 * OSX Window Management
-For work on Apple machines I use the indespensible skhd and yabai. My config is pretty self explanatory, win key to move the viewer, ctrl key to move the windows, with vim keys of course. 
+For work on Apple machines I use the indespensible skhd and yabai. My config is pretty self explanatory, win key to move the viewer, ctrl key to move the windows, all using the vim mindset. 
 
 * Terminal
-I use terminals less and less every day, as emacs slowly absorbs all my behaviour. Alacritty and kitty configs are here but only for macOS, suckless terminal just completely destroy both for speed so have no reason to use the former bloated terms now.
+I use terminals less and less, as emacs slowly absorbs all my behaviour. Alacritty and kitty configs are here but only for macOS, suckless terminal just completely destroy both for speed so have no reason to use the former on linux machines.
 
 * Xmonad
 There is an xmonad configuration, haven't used it in a while, and don't know Haskell so it's not good. It's based off /link/, heavily edited down since I keep actual window management very simple, with no bar or frills.
