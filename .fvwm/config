@@ -29,9 +29,9 @@ InfoStoreAdd runcmd "dmenu_run -nb '#2b4e5e'"
 
 # Default Font
 #DefaultFont "xft:Sans:Bold:size=12:antialias=True"
-DefaultFont "xft:Tamzen:Bold:size=14:antialias=False"
+# DefaultFont "xft:Tamzen:Bold:size=14:antialias=False"
 #DefaultFont "xft:3270:Bold:size=14:antialias=False"
-#DefaultFont "xft:Terminus:Bold:size=16:antialias=False"
+DefaultFont "xft:Terminus:Normal:size=14:antialias=False"
 ###########
 # 1: Functions
 #
@@ -64,9 +64,9 @@ AddToFunc   StartFunction
 + I Module FvwmButtons PagePanel
 + I Module FvwmButtons TimePanel
 + I Module FvwmButtons ImagePanel
-+ I Module FvwmButtons NotePanel
-+ I Module FvwmButtons StatPanel
-+ I Module FvwmButtons SettingsPanel
+# + I Module FvwmButtons NotePanel
+# + I Module FvwmButtons StatPanel
+# + I Module FvwmButtons SettingsPanel
 + I Module FvwmEvent EventNewDesk
 
 # Mouse Bindings Functions
@@ -217,7 +217,7 @@ Style * WindowShadeScrolls, WindowShadeSteps 10
 IgnoreModifiers L25
 
 # Decor Styles
-Style * BorderWidth 10, HandleWidth 10, MWMButtons, FvwmBorder, FirmBorder
+Style * BorderWidth 5, HandleWidth 5, MWMButtons, FvwmBorder, FirmBorder
 Style * Colorset 1, HilightColorset 2
 Style * BorderColorset 3, HilightBorderColorset 4
 
@@ -675,7 +675,7 @@ DestroyModuleConfig EventNewDesk:*
 
 
 DestroyModuleConfig TimePanel:*
-*TimePanel: Geometry 200x50-0+0
+*TimePanel: Geometry 150x50-0+0
 *TimePanel: Colorset 10
 *TimePanel: Rows 1
 *TimePanel: Columns 1
@@ -683,7 +683,7 @@ DestroyModuleConfig TimePanel:*
 Style TimePanel !Title, Borders, !Handles, Sticky, WindowListSkip, NeverFocus
 
 DestroyModuleConfig ImagePanel:*
-*ImagePanel: Geometry 200x200-0+70
+*ImagePanel: Geometry 150x150-0+70
 *ImagePanel: Colorset 10
 *ImagePanel: Rows 1
 *ImagePanel: Columns 1
@@ -692,7 +692,7 @@ DestroyModuleConfig ImagePanel:*
 Style ImagePanel !Title, Borders, !Handles, Sticky, WindowListSkip, NeverFocus
 
 DestroyModuleConfig PagePanel:*
-*PagePanel: Geometry 200x200-0+290
+*PagePanel: Geometry 150x150-0+240
 *PagePanel: Colorset 10
 *PagePanel: Rows 1
 *PagePanel: Columns 1
@@ -701,7 +701,7 @@ DestroyModuleConfig PagePanel:*
 Style PagePanel !Title, Borders, !Handles, Sticky, WindowListSkip, NeverFocus
 
 DestroyModuleConfig DeskPanel:*
-*DeskPanel: Geometry 200x50-0+510
+*DeskPanel: Geometry 150x40-0+410
 *DeskPanel: Colorset 10
 *DeskPanel: Rows 50
 *DeskPanel: Columns 200
@@ -713,7 +713,7 @@ DestroyModuleConfig DeskPanel:*
 Style DeskPanel !Title, Borders, !Handles, Sticky, WindowListSkip, NeverFocus
 
 DestroyModuleConfig NotePanel:*
-*NotePanel: Geometry 200x200-0+580
+*NotePanel: Geometry 150x200-0+580
 *NotePanel: Colorset 10
 *NotePanel: Rows 200
 *NotePanel: Columns 200
@@ -724,7 +724,7 @@ DestroyModuleConfig NotePanel:*
 Style NotePanel !Title, Borders, !Handles, Sticky, WindowListSkip, NeverFocus
 
 DestroyModuleConfig StatPanel:*
-*StatPanel: Geometry 200x500-0+800
+*StatPanel: Geometry 150x500-0+800
 *StatPanel: Colorset 10
 *StatPanel: Rows 500
 *StatPanel: Columns 200
@@ -737,7 +737,7 @@ DestroyModuleConfig StatPanel:*
 Style StatPanel !Title, Borders, !Handles, Sticky, WindowListSkip, NeverFocus
 
 DestroyModuleConfig SettingsPanel:*
-*SettingsPanel: Geometry 200x100-0+1480
+*SettingsPanel: Geometry 150x100-0+1480
 *SettingsPanel: Colorset 10
 *SettingsPanel: Rows 200
 *SettingsPanel: Columns 100
