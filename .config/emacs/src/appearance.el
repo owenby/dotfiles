@@ -24,11 +24,11 @@
   :defer nil
   :config
   ;; (load-theme 'doom-solarized-dark-high-contrast t)
-  (load-theme 'doom-solarized-light t)
+  ;; (load-theme 'doom-solarized-light t)
   ;; (load-theme 'doom-henna t)
   ;; (load-theme 'doom-snazzy t)
   ;; (load-theme 'doom-old-hope t)
-  ;; (load-theme 'doom-oceanic-next t)
+  (load-theme 'doom-oceanic-next t)
 )
 
 ;;; Modeline
