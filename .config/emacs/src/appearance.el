@@ -49,6 +49,7 @@
                          "\\|")))
   )
 
+
 (defun mode-line-fill (face reserve)
   "Return empty space using FACE and leaving RESERVE space on the right."
   (unless reserve
@@ -61,14 +62,13 @@
 
 (setq-default mode-line-format (list
                                 " "
-                               'mode-name
+                                'mode-name
                                 "   "
-                                ;; '(:eval (abbreviate-file-name default-directory))
+                                '(:eval (abbreviate-file-name default-directory))
                                 'mode-line-buffer-identification
-                                "  "
                                 ;; 'buffer-file-name
-                                'mode-line-modes
-                                       `(vc-mode vc-mode)
+                                ;; 'mode-line-modes
+                                ;; `(vc-mode vc-mode)
                                ;; Fill until the end of line but 10 characters
                                 (mode-line-fill 'mode-line 8)
                                 "%l:%c"
@@ -86,7 +86,7 @@
 ;;   ;; (setq doom-modeline-modal-icon nil)
 ;;   ;; (setq doom-modeline-project-detection 'project)
 ;;   ;; (setq doom-modeline-lsp t)
-;;   (set-face-attribute 'mode-line nil :height 185)
+;;   (set-face-attribute 'mode-line nil :height 150)
 ;; )
 
 ;;; Dashboard

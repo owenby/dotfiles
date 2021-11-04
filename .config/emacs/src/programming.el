@@ -1,35 +1,35 @@
 ;;; lsp-mode
 
-;; (use-package lsp-mode
-;;   :init
-;;   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-;;   (setq lsp-keymap-prefix "C-c l")
-;;   :config
-;;   ;; (setq lsp-ui-sideline-enable t)
-;;   (setq lsp-headerline-breadcrumb-enable-diagnostics nil)
-;;   (setq lsp-idle-delay 0.5)
-;;   ;; (setq lsp-completion-show-detail nil)
-;;   (setq read-process-output-max (* 1024 1024))
-;;   (setq lsp-modeline-diagnostics-enable nil)
-
-;;   (setq lsp-enable-semantic-highlighting nil)
-  
-;;   :hook
-;;   (
-;;    ;; (c++-mode . lsp)
-;;    ;; (c-mode . lsp)
-;;    (python-mode . lsp)
-;;    (latex-mode . lsp)
-;;    (lsp-mode . lsp-enable-which-key-integration))
-;;   :commands lsp)
-
-(use-package eglot
-  :defer nil
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
   :config
-  (add-hook 'c-mode-hook 'eglot-ensure)
-  (add-hook 'c++-mode-hook 'eglot-ensure)
-  (add-hook 'python-mode-hook 'eglot-ensure)
-  )
+  ;; (setq lsp-ui-sideline-enable t)
+  (setq lsp-headerline-breadcrumb-enable-diagnostics nil)
+  (setq lsp-idle-delay 0)
+  ;; (setq lsp-completion-show-detail nil)
+  (setq read-process-output-max (* 1024 1024))
+  (setq lsp-modeline-diagnostics-enable nil)
+
+  (setq lsp-enable-semantic-highlighting nil)
+  
+  :hook
+  (
+   (c++-mode . lsp)
+   (c-mode . lsp)
+   (python-mode . lsp)
+   (latex-mode . lsp)
+   (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
+
+;; (use-package eglot
+;;   :defer nil
+;;   :config
+;;   (add-hook 'c-mode-hook 'eglot-ensure)
+;;   (add-hook 'c++-mode-hook 'eglot-ensure)
+;;   (add-hook 'python-mode-hook 'eglot-ensure)
+;;   )
 
 (global-eldoc-mode 0)
 ;; (setq eldoc-idle-delay 0.5)
@@ -40,7 +40,7 @@
   :defer nil
   :config
   (setq company-idle-delay 0)
-  (setq company-tooltip-idle-delay 0.5)
+  (setq company-tooltip-idle-delay 0)
   (setq company-minimum-prefix-length 2)
   (bind-key "C-=" 'company-complete) 
   (global-company-mode)

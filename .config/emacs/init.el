@@ -41,8 +41,8 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
-(load-user-file "src/keybinds.el")
 
+(load-user-file "src/keybinds.el")
 
 (load-user-file "src/appearance.el")
 

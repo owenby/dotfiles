@@ -3,8 +3,8 @@
 ;; Set default font
 (set-face-attribute 'default nil
                     :family "Iosevka"
-                    :height 160
-                    :weight 'normal
+                    :height 145
+                    :weight 'normal 
                     :width 'normal)
 
 ;; Disable tool bar, menu bar, scroll bar.
