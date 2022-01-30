@@ -3,7 +3,7 @@
 ;; Set default font
 (set-face-attribute 'default nil
                     :family "Iosevka"
-                    :height 145
+                    :height 150
                     :weight 'normal 
                     :width 'normal)
 

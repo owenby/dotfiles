@@ -83,11 +83,12 @@
 ;(bind-key* "C-c C-h C-k" 'describe-key)
 
    ;; Open stuff
-(bind-key* "C-x C-o C-o" 'open-config)
+(bind-key* "C-x C-o C-o" 'open-emacs-config)
 (bind-key* "C-x C-o C-u" 'open-uni)
 (bind-key* "C-x C-o C-b" 'open-book)
 (bind-key* "C-x C-o C-p" 'open-pictures)
 (bind-key* "C-x C-o C-d" 'open-dissertation)
+(bind-key* "C-x C-o C-c" 'open-config)
 
 (bind-key* "C-x C-x" 'tmtxt/open-current-dir-in-terminal)
 
@@ -183,7 +184,7 @@ Called via the `after-load-functions' special hook."
   (split-window-vertically)
   (eshell))
 ;; Open config file
-(defun open-config ()
+(defun open-emacs-config ()
   (interactive)
   (find-file "~/.config/emacs/src/"))
 ;; Open book folder
@@ -202,6 +203,10 @@ Called via the `after-load-functions' special hook."
 (defun open-dissertation ()
   (interactive)
   (find-file "~/Work/"))
+;; Open config files
+(defun open-config ()
+  (interactive)
+  (find-file "~/dotfiles/"))
 ;; New framme
 (defun popout ()
   (interactive)
